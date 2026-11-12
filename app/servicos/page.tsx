@@ -139,7 +139,7 @@ export default function ServicosPage() {
               Serviços
             </Link>
             <Link
-              href="/#sobre"
+              href="/sobre"
               className="transition hover:text-[#1677FF]"
             >
               Sobre nós

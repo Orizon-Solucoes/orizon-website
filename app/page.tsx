@@ -260,9 +260,9 @@ export default function Home() {
             <Link href="/servicos" className="transition hover:text-[#1677FF]">
               Serviços
             </Link>
-            <a href="#sobre" className="transition hover:text-[#1677FF]">
+            <Link href="/sobre" className="transition hover:text-[#1677FF]">
               Sobre nós
-            </a>
+            </Link>
             <a href="#contato" className="transition hover:text-[#1677FF]">
               Contato
             </a>
@@ -320,12 +320,12 @@ export default function Home() {
                 <span aria-hidden="true">→</span>
               </Link>
 
-              <a
-                href="#sobre"
+              <Link
+                href="/sobre"
                 className="inline-flex items-center justify-center rounded-lg border border-white/15 px-7 py-4 text-sm font-medium text-white transition hover:border-[#1677FF] hover:bg-white/[0.04]"
               >
                 Conheça a Orizon
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -464,13 +464,13 @@ export default function Home() {
               à sua realidade.
             </p>
 
-            <a
-              href="#contato"
+            <Link
+              href="/sobre"
               className="mt-9 inline-flex items-center gap-3 text-sm font-semibold text-[#80B4FF] transition hover:text-white"
             >
-              Vamos conversar
+              Conheça nossa história
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -665,9 +665,9 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <a href="#sobre" className="transition hover:text-[#80B4FF]">
+                  <Link href="/sobre" className="transition hover:text-[#80B4FF]">
                     Sobre nós
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#contato" className="transition hover:text-[#80B4FF]">
