@@ -14,9 +14,46 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Orizon Soluções | Soluções em Tecnologia",
+  title: {
+    default: "Orizon Soluções | Tecnologia para empresas",
+    template: "%s | Orizon Soluções",
+  },
   description:
-    "Tecnologia, conectividade e inovação para pequenas empresas. Conheça as soluções da Orizon.",
+    "Soluções em tecnologia para empresas: suporte técnico, infraestrutura de redes, CFTV, desenvolvimento de sistemas e criação de websites.",
+  applicationName: "Orizon Soluções",
+  keywords: [
+    "Orizon Soluções",
+    "suporte técnico",
+    "infraestrutura de TI",
+    "redes de computadores",
+    "manutenção de computadores",
+    "CFTV",
+    "câmeras de segurança",
+    "desenvolvimento de sistemas",
+    "criação de websites",
+    "tecnologia para empresas",
+  ],
+  authors: [{ name: "Orizon Soluções" }],
+  creator: "Orizon Soluções",
+  publisher: "Orizon Soluções",
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: "Orizon Soluções | Tecnologia para empresas",
+    description:
+      "Tecnologia, conectividade e inovação para pequenas empresas. Conheça as soluções da Orizon.",
+    siteName: "Orizon Soluções",
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Orizon Soluções | Tecnologia para empresas",
+    description:
+      "Soluções em tecnologia, conectividade e inovação para pequenas empresas.",
+  },
 };
 
 export default function RootLayout({
