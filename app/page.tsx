@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Link from "next/link";
 
 type Servico = {
   numero: string;
@@ -101,7 +102,6 @@ function IlustracaoServico({
           </linearGradient>
         </defs>
 
-        {/* Elementos de fundo compartilhados */}
         <circle cx="240" cy="135" r="100" stroke="#1677FF" strokeOpacity=".10" />
         <circle cx="240" cy="135" r="76" stroke="#1677FF" strokeOpacity=".08" strokeDasharray="4 8" />
         <path d="M65 224H415" stroke="#314765" strokeOpacity=".45" />
@@ -241,25 +241,25 @@ export default function Home() {
     <main id="inicio" className="min-h-screen overflow-hidden bg-[#080D18]">
       {/* Cabeçalho */}
       <header className="relative z-10 border-b border-white/[0.07]">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-          <a href="#inicio" className="flex items-center">
+        <div className="mx-auto grid h-20 max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-6 lg:grid-cols-[1fr_auto_1fr] lg:gap-6 lg:px-10">
+          <Link href="/" className="flex w-fit shrink-0 items-center justify-self-start">
             <Image
               src="/logo-orizon-solucoes.png"
               alt="Orizon Soluções"
               width={240}
               height={80}
               priority
-              className="h-auto w-[170px] object-contain sm:w-[190px]"
+              className="h-auto w-[150px] object-contain sm:w-[170px] lg:w-[190px]"
             />
-          </a>
+          </Link>
 
-          <nav className="hidden items-center gap-9 text-sm text-gray-300 md:flex">
-            <a href="#inicio" className="transition hover:text-[#1677FF]">
+          <nav className="hidden items-center justify-self-center gap-5 whitespace-nowrap text-xs text-gray-300 lg:flex xl:gap-8 xl:text-sm">
+            <Link href="/" className="transition hover:text-[#1677FF]">
               Início
-            </a>
-            <a href="#servicos" className="transition hover:text-[#1677FF]">
-              Soluções
-            </a>
+            </Link>
+            <Link href="/servicos" className="transition hover:text-[#1677FF]">
+              Serviços
+            </Link>
             <a href="#sobre" className="transition hover:text-[#1677FF]">
               Sobre nós
             </a>
@@ -270,17 +270,17 @@ export default function Home() {
 
           <a
             href="#contato"
-            className="hidden rounded-lg border border-[#1677FF]/60 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#1677FF] sm:block"
+            className="hidden shrink-0 justify-self-end rounded-lg border border-[#1677FF]/60 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-[#1677FF] lg:inline-flex xl:px-5"
           >
             Fale conosco
           </a>
 
-          <a
-            href="#servicos"
-            className="text-sm font-medium text-white md:hidden"
+          <Link
+            href="/servicos"
+            className="justify-self-end text-right text-sm font-medium text-white transition hover:text-[#80B4FF] lg:hidden"
           >
             Explorar →
-          </a>
+          </Link>
         </div>
       </header>
 
@@ -312,13 +312,13 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#servicos"
+              <Link
+                href="/servicos"
                 className="inline-flex items-center justify-center gap-3 rounded-lg bg-[#1677FF] px-7 py-4 text-sm font-semibold text-white transition hover:bg-[#0865E5]"
               >
                 Conheça nossas soluções
                 <span aria-hidden="true">→</span>
-              </a>
+              </Link>
 
               <a
                 href="#sobre"
@@ -374,9 +374,11 @@ export default function Home() {
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {servicos.map((servico) => (
-              <article
+              <Link
                 key={servico.numero}
-                className="group overflow-hidden rounded-xl border border-white/[0.12] bg-[#111F35] transition duration-300 hover:-translate-y-1 hover:border-[#1677FF]/50 hover:shadow-[0_15px_45px_rgba(0,0,0,0.2)]"
+                href={`/servicos#servico-${servico.numero}`}
+                aria-label={`Saiba mais sobre ${servico.titulo}`}
+                className="group block overflow-hidden rounded-xl border border-white/[0.12] bg-[#111F35] transition duration-300 hover:-translate-y-1 hover:border-[#1677FF]/50 hover:shadow-[0_15px_45px_rgba(0,0,0,0.2)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1677FF]"
               >
                 <IlustracaoServico tipo={servico.ilustracao} />
 
@@ -410,8 +412,18 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-              </article>
+              </Link>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/servicos"
+              className="inline-flex items-center gap-3 rounded-lg border border-[#1677FF]/50 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#1677FF]"
+            >
+              Conheça todos os serviços
+              <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -545,7 +557,6 @@ export default function Home() {
           </div>
 
           <div className="mx-auto mt-16 grid max-w-4xl gap-5 md:grid-cols-2">
-            {/* WhatsApp */}
             <a
               href="https://wa.me/5521979293827"
               target="_blank"
@@ -579,7 +590,6 @@ export default function Home() {
               </div>
             </a>
 
-            {/* E-mail */}
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=orizonsolucoesrj%40gmail.com"
               target="_blank"
@@ -620,9 +630,8 @@ export default function Home() {
       <footer className="border-t border-white/[0.07] bg-[#080D18]">
         <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-            {/* Identidade */}
             <div className="lg:col-span-2">
-              <a href="#inicio" className="inline-flex items-center">
+              <Link href="/" className="inline-flex items-center">
                 <Image
                   src="/logo-orizon-solucoes.png"
                   alt="Orizon Soluções"
@@ -630,7 +639,7 @@ export default function Home() {
                   height={75}
                   className="h-auto w-[165px] object-contain"
                 />
-              </a>
+              </Link>
 
               <p className="mt-5 max-w-sm text-sm leading-7 text-[#A1AABA]">
                 Soluções em tecnologia para pequenas empresas.
@@ -639,7 +648,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Navegação */}
             <div>
               <h3 className="text-sm font-semibold text-white">
                 Navegação
@@ -647,14 +655,14 @@ export default function Home() {
 
               <ul className="mt-5 space-y-3 text-sm text-[#A1AABA]">
                 <li>
-                  <a href="#inicio" className="transition hover:text-[#80B4FF]">
+                  <Link href="/" className="transition hover:text-[#80B4FF]">
                     Início
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#servicos" className="transition hover:text-[#80B4FF]">
-                    Soluções
-                  </a>
+                  <Link href="/servicos" className="transition hover:text-[#80B4FF]">
+                    Serviços
+                  </Link>
                 </li>
                 <li>
                   <a href="#sobre" className="transition hover:text-[#80B4FF]">
@@ -669,7 +677,6 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Contatos */}
             <div>
               <h3 className="text-sm font-semibold text-white">
                 Contato
