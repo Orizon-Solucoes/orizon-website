@@ -85,7 +85,7 @@ export default function SobrePage() {
             >
               Sobre nós
             </Link>
-            <Link href="/#contato" className="transition hover:text-[#1677FF]">
+            <Link href="/contato" className="transition hover:text-[#1677FF]">
               Contato
             </Link>
           </nav>
@@ -146,7 +146,7 @@ export default function SobrePage() {
               </Link>
 
               <Link
-                href="/#contato"
+                href="/contato"
                 className="inline-flex items-center justify-center rounded-lg border border-white/15 px-7 py-4 text-sm font-medium text-white transition hover:border-[#1677FF] hover:bg-white/[0.04]"
               >
                 Entre em contato
@@ -464,7 +464,7 @@ export default function SobrePage() {
               <Link href="/sobre" className="text-[#80B4FF] transition hover:text-white">
                 Sobre nós
               </Link>
-              <Link href="/#contato" className="transition hover:text-white">
+              <Link href="/contato" className="transition hover:text-white">
                 Contato
               </Link>
             </nav>

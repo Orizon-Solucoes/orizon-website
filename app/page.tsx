@@ -263,13 +263,13 @@ export default function Home() {
             <Link href="/sobre" className="transition hover:text-[#1677FF]">
               Sobre nós
             </Link>
-            <a href="#contato" className="transition hover:text-[#1677FF]">
+            <a href="/contato" className="transition hover:text-[#1677FF]">
               Contato
             </a>
           </nav>
 
           <a
-            href="#contato"
+            href="/contato"
             className="hidden shrink-0 justify-self-end rounded-lg border border-[#1677FF]/60 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-[#1677FF] lg:inline-flex xl:px-5"
           >
             Fale conosco
@@ -670,7 +670,7 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <a href="#contato" className="transition hover:text-[#80B4FF]">
+                  <a href="contato" className="transition hover:text-[#80B4FF]">
                     Contato
                   </a>
                 </li>

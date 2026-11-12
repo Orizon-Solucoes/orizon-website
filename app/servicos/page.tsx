@@ -145,7 +145,7 @@ export default function ServicosPage() {
               Sobre nós
             </Link>
             <Link
-              href="/#contato"
+              href="/contato"
               className="transition hover:text-[#1677FF]"
             >
               Contato
@@ -378,7 +378,7 @@ export default function ServicosPage() {
             </a>
 
             <Link
-              href="/#contato"
+              href="/contato"
               className="inline-flex items-center justify-center rounded-lg border border-white/15 px-8 py-4 text-sm font-medium text-white transition hover:border-[#1677FF] hover:bg-white/[0.04]"
             >
               Outros canais de contato
@@ -412,13 +412,13 @@ export default function ServicosPage() {
                 Serviços
               </Link>
               <Link
-                href="/#sobre"
+                href="/sobre"
                 className="transition hover:text-white"
               >
                 Sobre nós
               </Link>
               <Link
-                href="/#contato"
+                href="/contato"
                 className="transition hover:text-white"
               >
                 Contato
