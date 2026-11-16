@@ -1,16 +1,17 @@
-
 # Orizon Soluções — Website
 
-Website institucional da Orizon Soluções, desenvolvido para apresentar a empresa, seus serviços e canais de contato.
+Website institucional da **Orizon Soluções**, criado para apresentar a empresa, seus serviços e soluções em tecnologia.
 
-## Tecnologias utilizadas
+🌐 **Site:** https://orizonsolucoes.vercel.app/
+
+## Tecnologias
 
 - Next.js
 - React
 - TypeScript
 - Tailwind CSS
 
-## Como executar o projeto
+## Executar localmente
 
 Instale as dependências:
 
@@ -24,15 +25,13 @@ Inicie o servidor de desenvolvimento:
 npm run dev
 ```
 
-Acesse no navegador:
-
-http://localhost:3000
+Acesse http://localhost:3000.
 
 ## Estrutura
 
-- `app/` — páginas, layout e estilos globais.
-- `public/` — imagens, logos e arquivos públicos.
+- `app/` — páginas, layouts e estilos.
+- `public/` — imagens, logotipos e arquivos públicos.
 
-## Desenvolvimento
+---
 
-O projeto é desenvolvido e mantido pela Orizon Soluções.
+Desenvolvido e mantido pela **Orizon Soluções**.
