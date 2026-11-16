@@ -138,16 +138,13 @@ export default function ServicosPage() {
             >
               Serviços
             </Link>
-            <Link
-              href="/sobre"
-              className="transition hover:text-[#1677FF]"
-            >
+            <Link href="/sobre" className="transition hover:text-[#1677FF]">
               Sobre nós
             </Link>
-            <Link
-              href="/contato"
-              className="transition hover:text-[#1677FF]"
-            >
+            <Link href="/portfolio" className="transition hover:text-[#1677FF]">
+              Portfólio
+            </Link>
+            <Link href="/contato" className="transition hover:text-[#1677FF]">
               Contato
             </Link>
           </nav>
@@ -407,20 +404,17 @@ export default function ServicosPage() {
               </Link>
               <Link
                 href="/servicos"
-                className="transition hover:text-white"
+                className="text-[#80B4FF] transition hover:text-white"
               >
                 Serviços
               </Link>
-              <Link
-                href="/sobre"
-                className="transition hover:text-white"
-              >
+              <Link href="/sobre" className="transition hover:text-white">
                 Sobre nós
               </Link>
-              <Link
-                href="/contato"
-                className="transition hover:text-white"
-              >
+              <Link href="/portfolio" className="transition hover:text-white">
+                Portfólio
+              </Link>
+              <Link href="/contato" className="transition hover:text-white">
                 Contato
               </Link>
             </nav>

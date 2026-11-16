@@ -38,6 +38,9 @@ export default function ContatoPage() {
             <Link href="/sobre" className="transition hover:text-[#1677FF]">
               Sobre nós
             </Link>
+            <Link href="/portfolio" className="transition hover:text-[#1677FF]">
+              Portfólio
+            </Link>
             <Link
               href="/contato"
               className="text-[#80B4FF] transition hover:text-white"
@@ -254,6 +257,9 @@ export default function ContatoPage() {
               </Link>
               <Link href="/sobre" className="transition hover:text-white">
                 Sobre nós
+              </Link>
+              <Link href="/portfolio" className="transition hover:text-white">
+                Portfólio
               </Link>
               <Link
                 href="/contato"
