@@ -112,7 +112,7 @@ export default function SobrePage() {
       <section className="relative border-b border-white/[0.07]">
         <div className="pointer-events-none absolute -right-40 top-0 h-[450px] w-[450px] rounded-full bg-[#1677FF]/10 blur-[140px]" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-28 lg:px-10 lg:py-36">
+        <div className="relative mx-auto max-w-7xl px-6 py-28 lg:px-10 lg:py-32">
           <div className="max-w-3xl">
             <div className="mb-8 flex items-center gap-3">
               <span className="h-px w-10 bg-[#1677FF]" />
