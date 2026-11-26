@@ -6,11 +6,13 @@ const projetos = [
   {
     numero: "01",
     categoria: "Sistema web",
-    titulo: "Chromebook Manager",
+    titulo: "SEICE Manager",
     descricao:
       "Sistema para gerenciamento de equipamentos de TI, permitindo centralizar o inventário, acompanhar manutenções e consultar informações e custos dos equipamentos.",
     tecnologias: ["Next.js", "React", "TypeScript", "Tailwind CSS", "MySQL"],
-    github: "https://github.com/Orizon-Solucoes/chromebook-manager",
+    github: "https://github.com/Orizon-Solucoes/seice-manager",
+    imagem: "/seice-manager-dashboard.webp",
+    imagemAlt: "Dashboard do sistema SEICE Manager",
   },
   {
     numero: "02",
@@ -20,6 +22,8 @@ const projetos = [
       "Sistema desktop desenvolvido para auxiliar no gerenciamento comercial, reunindo recursos de controle de vendas, estoque e movimentações de caixa.",
     tecnologias: ["Electron", "React", "TypeScript", "Vite"],
     github: "https://github.com/Orizon-Solucoes/gestao-oliveira",
+    imagem: "/gestao-oliveira-dashboard.webp",
+    imagemAlt: "Dashboard do sistema Gestão Oliveira",
   },
 ];
 
@@ -154,45 +158,14 @@ export default function PortfolioPage() {
                 key={projeto.numero}
                 className="group overflow-hidden rounded-xl border border-white/[0.10] bg-[#111F35] transition duration-300 hover:-translate-y-1 hover:border-[#1677FF]/50"
               >
-                {/* Espaço reservado para a interface */}
-                <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden border-b border-white/[0.07] bg-[#142642]">
-                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(22,119,255,0.13),transparent_70%)]" />
-
-                  <div className="relative flex flex-col items-center gap-4 text-center">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-xl border border-[#1677FF]/30 bg-[#1677FF]/10">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        className="h-8 w-8 text-[#80B4FF]"
-                        aria-hidden="true"
-                      >
-                        <rect
-                          x="3"
-                          y="4"
-                          width="18"
-                          height="13"
-                          rx="2"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                        />
-                        <path
-                          d="M8 21h8M12 17v4"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                    </div>
-
-                    <div>
-                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#80B4FF]">
-                        Interface do projeto
-                      </span>
-                      <p className="mt-2 text-sm text-[#A1AABA]">
-                        Imagens em breve
-                      </p>
-                    </div>
-                  </div>
+                <div className="relative aspect-[16/9] overflow-hidden border-b border-white/[0.07] bg-[#142642]">
+                  <Image
+                    src={projeto.imagem}
+                    alt={projeto.imagemAlt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+                  />
                 </div>
 
                 <div className="p-7 sm:p-9">
